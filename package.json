@@ -1,7 +1,7 @@
 {
-  "name": "omegatv",
-  "version": "2.4.0",
-  "description": "OmegaTV WebPlayer",
+  "name": "omegaTV Test",
+  "version": "1.0.0",
+  "description": "OmegaTV Test Player",
   "main": "index.js",
   "author": "",
   "license": "ISC",
