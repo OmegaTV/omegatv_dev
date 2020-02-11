@@ -28,15 +28,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/OmegaTV/stalker_classic.git"
+    "url": "https://github.com/OmegaTV/omegatv_dev"
   },
   "config": {
     "type": "app",
     "category": "apps",
     "backgroundColor": "#171717",
-    "name": "OmegaTV",
+    "name": "OmegaTV test",
     "legacy": true,
-    "description": "OmegaTV Player",
+    "description": "OmegaTV Test Player",
     "icons": {
       "480": {
         "logoNormal": "img/480/normal.png",
