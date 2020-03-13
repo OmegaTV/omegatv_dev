@@ -5280,15 +5280,12 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 };
 
 StalkerPlayer.prototype.mute_video = function() {
-    console.log("Muted start");
     stbVideo.mute = true;
-    console.log("Muted finish");
+    stbVideo.SetAutoPowerDownTime(5);
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
-    console.log("Stalker unmute new new");
     video.muted = false;
-    console.log("UNMute completed new new");
 };
 
 //local- and session- storages
@@ -6402,6 +6399,9 @@ function eventsList() {
             // console.log("Volume level: " + gSTB.GetMute());
 
             playback.mute_video();
+
+            if (gSTB.GetMute() == 0) playback.mute_video();//if not muted
+            else playback.unmute_video();
 
             // if(gSTB.GetMute() == 0){
             //     console.log("mute of");
