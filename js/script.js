@@ -5280,12 +5280,14 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 };
 
 StalkerPlayer.prototype.mute_video = function() {
-    console.log("Mute video object:");
-    console.log(video);
+    console.log("Current volume:" + stb.GetVolume());
+    console.log("Volume geted");
+    // console.log("Mute video object:");
+    // console.log(video);
 
-    console.log("Stalker mute new new");
-    video.muted = "muted";
-    console.log("Mute completed new new");
+    // console.log("Stalker mute new new");
+    // video.muted = "muted";
+    // console.log("Mute completed new new");
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
