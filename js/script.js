@@ -5280,6 +5280,9 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 };
 
 StalkerPlayer.prototype.mute_video = function() {
+    console.log("Mute video object:");
+    console.log(video);
+
     console.log("Stalker mute new new");
     video.muted = "muted";
     video.muted = true;
