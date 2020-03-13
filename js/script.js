@@ -5281,11 +5281,14 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 
 StalkerPlayer.prototype.mute_video = function() {
     stbVideo.mute = true;
-    stbVideo.SetAutoPowerDownTime(5);
+    console.log("Mute audio");
+    gSTB.SetAutoPowerDownTime(5);
+    console.log("PowerDown");
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
     video.muted = false;
+    console.log("UnMute audio");
 };
 
 //local- and session- storages
@@ -6395,22 +6398,10 @@ function eventsList() {
             stalker.changeVolume(stbVideo.volume);
             break;
         case 192: // volume off/on
-            console.log("mute action level");
-            // console.log("Volume level: " + gSTB.GetMute());
-
-            playback.mute_video();
+            console.log("Mute status: " + gSTB.GetMute());
 
             if (gSTB.GetMute() == 0) playback.mute_video();//if not muted
             else playback.unmute_video();
-
-            // if(gSTB.GetMute() == 0){
-            //     console.log("mute of");
-            //     playback.unmute_video();
-            // }
-            // else{
-            //     console.log("mute on");
-            //     playback.mute_video();
-            // }
             break;
         case 48: // 0-9
             if(mag.currentObj == NAV_CONTENT || mag.currentObj == NAV_SEARCH_CHANNEL) {
