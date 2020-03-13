@@ -5285,7 +5285,6 @@ StalkerPlayer.prototype.mute_video = function() {
 
     console.log("Stalker mute new new");
     video.muted = "muted";
-    video.muted = true;
     console.log("Mute completed new new");
 };
 
