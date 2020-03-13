@@ -5864,6 +5864,8 @@ stbVideo.onPlayStart = function () {
 window.addEventListener('keydown', eventsList);
 
 function eventsList() {
+    console.log("Mag Info:");
+    console.log(event.keyCode);
     console.log(mag.currentObj);
     clearTimeout(mag.keydownTimer);
     switch (event.keyCode) {
