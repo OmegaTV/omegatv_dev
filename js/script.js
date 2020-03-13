@@ -5281,13 +5281,14 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 
 StalkerPlayer.prototype.mute_video = function() {
     console.log("Stalker mute new");
-    video.mute = true;
+    video.muted = "muted";
+    video.muted = true;
     console.log("Mute completed new");
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
     console.log("Stalker unmute new");
-    video.mute = false;
+    video.muted = false;
     console.log("UNMute completed new");
 };
 
