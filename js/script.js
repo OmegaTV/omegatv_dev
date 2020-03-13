@@ -5287,7 +5287,7 @@ StalkerPlayer.prototype.mute_video = function() {
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
-    video.muted = false;
+    stbVideo.mute = false;
     console.log("UnMute audio");
 };
 
