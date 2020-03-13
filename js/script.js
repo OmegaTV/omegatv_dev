@@ -5282,6 +5282,8 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 StalkerPlayer.prototype.mute_video = function() {
     stbVideo.mute = true;
     console.log("Mute audio");
+
+    gSTB.SetAutoPowerDownInitAttr();
     gSTB.SetAutoPowerDownTime(5);
     console.log("PowerDown");
 };
