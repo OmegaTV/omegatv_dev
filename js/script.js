@@ -6394,8 +6394,17 @@ function eventsList() {
             stalker.changeVolume(stbVideo.volume);
             break;
         case 192: // volume off/on
-            if (gSTB.GetMute() == 0) playback.mute_video();//if not muted
-            else playback.unmute_video();
+            console.log("mute action");
+            console.log("Volume level: " + gSTB.GetMute());
+
+            if(gSTB.GetMute() == 0){
+                console.log("mute of");
+                playback.unmute_video();
+            }
+            else{
+                console.log("mute on");
+                playback.mute_video();
+            }
             break;
         case 48: // 0-9
             if(mag.currentObj == NAV_CONTENT || mag.currentObj == NAV_SEARCH_CHANNEL) {
