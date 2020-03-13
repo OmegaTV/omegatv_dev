@@ -5280,16 +5280,16 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 };
 
 StalkerPlayer.prototype.mute_video = function() {
-    console.log("Stalker mute new");
+    console.log("Stalker mute new new");
     video.muted = "muted";
     video.muted = true;
-    console.log("Mute completed new");
+    console.log("Mute completed new new");
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
-    console.log("Stalker unmute new");
+    console.log("Stalker unmute new new");
     video.muted = false;
-    console.log("UNMute completed new");
+    console.log("UNMute completed new new");
 };
 
 //local- and session- storages
@@ -6399,17 +6399,19 @@ function eventsList() {
             stalker.changeVolume(stbVideo.volume);
             break;
         case 192: // volume off/on
-            console.log("mute action");
-            console.log("Volume level: " + gSTB.GetMute());
+            console.log("mute action level");
+            // console.log("Volume level: " + gSTB.GetMute());
 
-            if(gSTB.GetMute() == 0){
-                console.log("mute of");
-                playback.unmute_video();
-            }
-            else{
-                console.log("mute on");
-                playback.mute_video();
-            }
+            playback.mute_video();
+
+            // if(gSTB.GetMute() == 0){
+            //     console.log("mute of");
+            //     playback.unmute_video();
+            // }
+            // else{
+            //     console.log("mute on");
+            //     playback.mute_video();
+            // }
             break;
         case 48: // 0-9
             if(mag.currentObj == NAV_CONTENT || mag.currentObj == NAV_SEARCH_CHANNEL) {
