@@ -5295,7 +5295,7 @@ StalkerPlayer.prototype.unmute_video = function() {
 
     document.getElementById('volumebar').classList.add('hidden');
     document.getElementById('volumebar-mute').classList.add('hidden');
-    document.getElementById('volumebar-unmute').classList.add('hidden');
+    document.getElementById('volumebar-unmute').classList.remove('hidden');
 };
 
 //local- and session- storages
