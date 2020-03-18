@@ -5281,7 +5281,7 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 
 StalkerPlayer.prototype.mute_video = function() {
     stbVideo.mute = true;
-    $(".volumebar-mute").removeClass("hidden");
+    // $(".volumebar-mute").removeClass("hidden");
 
     // gSTB.SetAutoPowerDownInitAttr();
     // gSTB.SetAutoPowerDownTime(5);
@@ -5290,7 +5290,7 @@ StalkerPlayer.prototype.mute_video = function() {
 
 StalkerPlayer.prototype.unmute_video = function() {
     stbVideo.mute = false;
-    $(".volumebar-mute").addClass("hidden");
+    // $(".volumebar-mute").addClass("hidden");
 };
 
 //local- and session- storages
