@@ -1326,6 +1326,14 @@ body {
     font-size: 28px;
     text-align: center;
 }
+
+.volumebar-mute{
+    width:50px;
+    margin-right:30px
+}
+
+
+
 /* <---- volumebar*/
 
 

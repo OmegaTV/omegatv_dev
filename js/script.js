@@ -5281,8 +5281,7 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 
 StalkerPlayer.prototype.mute_video = function() {
     stbVideo.mute = true;
-    // $(".volumebar-mute").removeClass("hidden");
-
+    document.getElementById('volumebar-mute').classList.remove('hidden');   
     // gSTB.SetAutoPowerDownInitAttr();
     // gSTB.SetAutoPowerDownTime(5);
     // console.log("PowerDown");
@@ -5290,6 +5289,7 @@ StalkerPlayer.prototype.mute_video = function() {
 
 StalkerPlayer.prototype.unmute_video = function() {
     stbVideo.mute = false;
+    document.getElementById('volumebar-mute').classList.add('hidden');
     // $(".volumebar-mute").addClass("hidden");
 };
 
