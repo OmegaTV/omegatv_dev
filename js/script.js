@@ -5287,6 +5287,8 @@ StalkerPlayer.prototype.mute_video = function() {
     document.getElementById('volumebar-unmute').classList.add('hidden');
     document.getElementById('volumebar-text').classList.add('hidden');
     
+    gSTB.CloseWebWindow();
+    console.log("PowerOff");
     // gSTB.SetAutoPowerDownInitAttr();
     // gSTB.SetAutoPowerDownTime(5);
     // console.log("PowerDown");
