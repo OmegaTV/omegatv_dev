@@ -5282,11 +5282,9 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 StalkerPlayer.prototype.mute_video = function() {
     stbVideo.mute = true;
 
-    console.log("Volumebar:");
-    console.log(document.getElementById('volumebar-mute'));
-
     document.getElementById('volumebar').classList.remove('hidden');
     document.getElementById('volumebar-mute').classList.remove('hidden');   
+    document.getElementById('volumebar-unmute').classList.add('hidden');
     // gSTB.SetAutoPowerDownInitAttr();
     // gSTB.SetAutoPowerDownTime(5);
     // console.log("PowerDown");
@@ -5295,12 +5293,9 @@ StalkerPlayer.prototype.mute_video = function() {
 StalkerPlayer.prototype.unmute_video = function() {
     stbVideo.mute = false;
 
-    console.log("Volumebar:");
-    console.log(document.getElementById('volumebar-mute'));
-
     document.getElementById('volumebar').classList.add('hidden');
     document.getElementById('volumebar-mute').classList.add('hidden');
-    // $(".volumebar-mute").addClass("hidden");
+    document.getElementById('volumebar-unmute').classList.add('hidden');
 };
 
 //local- and session- storages
