@@ -5285,6 +5285,8 @@ StalkerPlayer.prototype.mute_video = function() {
     document.getElementById('volumebar').classList.remove('hidden');
     document.getElementById('volumebar-mute').classList.remove('hidden');   
     document.getElementById('volumebar-unmute').classList.add('hidden');
+    document.getElementById('volumebar-text').classList.add('hidden');
+    
     // gSTB.SetAutoPowerDownInitAttr();
     // gSTB.SetAutoPowerDownTime(5);
     // console.log("PowerDown");
@@ -5296,6 +5298,7 @@ StalkerPlayer.prototype.unmute_video = function() {
     document.getElementById('volumebar').classList.add('hidden');
     document.getElementById('volumebar-mute').classList.add('hidden');
     document.getElementById('volumebar-unmute').classList.remove('hidden');
+    document.getElementById('volumebar-text').classList.remove('hidden');
 };
 
 //local- and session- storages
