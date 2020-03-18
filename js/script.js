@@ -5281,16 +5281,16 @@ StalkerPlayer.prototype.channelSwitch = function (url) {
 
 StalkerPlayer.prototype.mute_video = function() {
     stbVideo.mute = true;
-    console.log("Mute audio");
+    $(".volumebar-mute").removeClass("hidden");
 
-    gSTB.SetAutoPowerDownInitAttr();
-    gSTB.SetAutoPowerDownTime(5);
-    console.log("PowerDown");
+    // gSTB.SetAutoPowerDownInitAttr();
+    // gSTB.SetAutoPowerDownTime(5);
+    // console.log("PowerDown");
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
     stbVideo.mute = false;
-    console.log("UnMute audio");
+    $(".volumebar-mute").addClass("hidden");
 };
 
 //local- and session- storages
@@ -6400,7 +6400,6 @@ function eventsList() {
             stalker.changeVolume(stbVideo.volume);
             break;
         case 192: // volume off/on
-            console.log("Mute status: " + gSTB.GetMute());
 
             if (gSTB.GetMute() == 0) playback.mute_video();//if not muted
             else playback.unmute_video();
