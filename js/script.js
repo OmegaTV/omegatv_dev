@@ -5962,7 +5962,10 @@ function eventsList() {
             console.log('back');
             switch (mag.currentObj) {
                 case NAV_AUTHORIZATION :
-                    mag.exitFromApp();
+                    console.log("exit");
+                    mag.setExitAppPopupMode();
+                    mag.openExitPopup();
+                    mag.focusOnExitAppConfirmBtn();
                     break;
                 case NAV_CONTENT :
                     console.log("exit");
