@@ -5963,8 +5963,8 @@ function eventsList() {
             switch (mag.currentObj) {
                 case NAV_AUTHORIZATION :
                     console.log("exit");
-                    console.log(exitPopup);
-                    document.getElementById('exit-popup-confirm-btn').classList.remove('hidden');
+                    document.getElementById('main-content').classList.remove('hidden');
+                    document.getElementById('exit-popup').classList.remove('hidden');
                     console.log("exit popup open");
                     break;
                 case NAV_CONTENT :
