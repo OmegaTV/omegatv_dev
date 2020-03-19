@@ -5965,6 +5965,10 @@ function eventsList() {
                     console.log("exit");
                     document.getElementById('main-content').classList.remove('hidden');
                     document.getElementById('exit-popup').classList.remove('hidden');
+
+                    mag.setExitAppPopupMode();
+                    mag.focusOnExitAppConfirmBtn();
+
                     console.log("exit popup open");
                     break;
                 case NAV_CONTENT :
