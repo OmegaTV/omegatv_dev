@@ -6060,9 +6060,9 @@ function eventsList() {
             break;
         case 85:
             console.log("Stand by mode :");
-            console.log(window.gSTB.standbyMode());
+            console.log(window.gSTB.GetStandByStatus());
 
-            if(window.gSTB.standbyMode() == 0){
+            if(window.gSTB.GetStandByStatus() == 0){
                 window.gSTB.StandBy(true);
                 console.log("Power turn off");
             }
