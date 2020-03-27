@@ -5962,14 +5962,7 @@ function eventsList() {
             console.log('back');
             switch (mag.currentObj) {
                 case NAV_AUTHORIZATION :
-                    console.log("exit");
-                    document.getElementById('main-content').classList.remove('hidden');
-                    document.getElementById('exit-popup').classList.remove('hidden');
-
-                    mag.setExitAppPopupMode();
-                    mag.focusOnExitAppConfirmBtn();
-
-                    console.log("exit popup open");
+                    mag.exitFromApp();
                     break;
                 case NAV_CONTENT :
                     console.log("exit");
@@ -6065,6 +6058,10 @@ function eventsList() {
                     break;
             }
             break;
+        case 85:
+            console.log("Power off start");
+            window.gSTB.ExecAction("reboot")
+            console.log("Power off start");
         case 37: //left-button
             console.log('left');
             switch (mag.currentObj) {
