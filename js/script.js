@@ -6062,7 +6062,7 @@ function eventsList() {
             console.log("Stand by mode :");
             console.log(window.gSTB.GetStandByStatus());
 
-            if(window.gSTB.GetStandByStatus() == 0){
+            if(window.gSTB.GetStandByStatus() == false){
                 window.gSTB.StandBy(true);
                 console.log("Power turn off");
             }
