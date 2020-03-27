@@ -5286,12 +5286,6 @@ StalkerPlayer.prototype.mute_video = function() {
     document.getElementById('volumebar-mute').classList.remove('hidden');   
     document.getElementById('volumebar-unmute').classList.add('hidden');
     document.getElementById('volumebar-text').classList.add('hidden');
-    
-    gSTB.CloseWebWindow();
-    console.log("PowerOff");
-    // gSTB.SetAutoPowerDownInitAttr();
-    // gSTB.SetAutoPowerDownTime(5);
-    // console.log("PowerDown");
 };
 
 StalkerPlayer.prototype.unmute_video = function() {
@@ -6068,6 +6062,19 @@ function eventsList() {
             }
             else{
                 window.gSTB.StandBy(false);
+
+                mag.init = function () {
+                    navigation.hidePlayback();
+                    var tvType = 'Mag';
+                    Auth.prototype.clientAuthorization(null, function () {
+                        if (navigation.ifActivationMode()) {
+                            mag.authorization();
+                        } else {
+                            mag.setContentMode();
+                        }
+                        return tvType;
+                    });
+                };
                 console.log("Power turn on");                
             }
 
