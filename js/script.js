@@ -6060,8 +6060,9 @@ function eventsList() {
             break;
         case 85:
             console.log("Power turn start");
-            window.gSTB.ExecAction("front_panel led-off")
+            window.gSTB.ExecAction("front_panel led-off");
             console.log("Power turn end");
+            break
         case 37: //left-button
             console.log('left');
             switch (mag.currentObj) {
