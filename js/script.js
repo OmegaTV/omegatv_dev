@@ -6063,18 +6063,17 @@ function eventsList() {
             else{
                 window.gSTB.StandBy(false);
 
-                mag.init = function () {
-                    navigation.hidePlayback();
-                    var tvType = 'Mag';
-                    Auth.prototype.clientAuthorization(null, function () {
-                        if (navigation.ifActivationMode()) {
-                            mag.authorization();
-                        } else {
-                            mag.setContentMode();
-                        }
-                        return tvType;
-                    });
-                };
+                navigation.hidePlayback();
+                console.log("before auth");
+                Auth.prototype.clientAuthorization(null, function () {
+                    console.log("Auth in");
+                    if (navigation.ifActivationMode()) {
+                        mag.authorization();
+                    } else {
+                        mag.setContentMode();
+                    }
+                });
+
                 console.log("Power turn on");                
             }
 
