@@ -6060,7 +6060,7 @@ function eventsList() {
             break;
         case 85:
             console.log("Power turn start");
-            window.gSTB.ExecAction("front_panel led-off");
+            window.gSTB.StandBy(true);
             console.log("Power turn end");
             break
         case 37: //left-button
