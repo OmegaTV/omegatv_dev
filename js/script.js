@@ -6064,14 +6064,16 @@ function eventsList() {
                 window.gSTB.StandBy(false);
 
                 navigation.hidePlayback();
+                var tvType = 'Mag';
                 console.log("before auth");
                 Auth.prototype.clientAuthorization(null, function () {
-                    console.log("Auth in");
                     if (navigation.ifActivationMode()) {
+                        console.log("in auth");
                         mag.authorization();
                     } else {
                         mag.setContentMode();
                     }
+                    return tvType;
                 });
 
                 console.log("Power turn on");                
