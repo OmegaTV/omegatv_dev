@@ -6059,9 +6059,18 @@ function eventsList() {
             }
             break;
         case 85:
-            console.log("Power turn start");
-            window.gSTB.StandBy(true);
-            console.log("Power turn end");
+            console.log("Stand by mode :");
+            console.log(window.gSTB.standbyMode());
+
+            if(window.gSTB.standbyMode() == 0){
+                window.gSTB.StandBy(true);
+                console.log("Power turn off");
+            }
+            else{
+                window.gSTB.StandBy(false);
+                console.log("Power turn on");                
+            }
+
             break
         case 37: //left-button
             console.log('left');
