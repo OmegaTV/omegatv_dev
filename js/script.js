@@ -6063,8 +6063,9 @@ function eventsList() {
                     }
                     break;
                 default:
-
                     if(window.gSTB.GetStandByStatus() == false){
+                        navigation.closeLeftMenu();
+                        mag.closeRightMenu();
                         window.gSTB.StandBy(true);
                     }
                     else{
