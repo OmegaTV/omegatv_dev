@@ -6069,21 +6069,7 @@ function eventsList() {
                     }
                     else{
                         window.gSTB.StandBy(false);
-        
-                        navigation.hidePlayback();
-                        var tvType = 'Mag';
-                        Auth.prototype.clientAuthorization(null, function () {
-
-                            console.log("Activation mode:");
-                            console.log(navigation.ifActivationMode());
-
-                            if (navigation.ifActivationMode()) {
-                                mag.authorization();
-                            } else {
-                                mag.setContentMode();
-                            }
-                            return tvType;
-                        });            
+                        init(); 
                     }
                     break;
             }
