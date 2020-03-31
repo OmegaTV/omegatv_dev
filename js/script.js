@@ -6063,21 +6063,15 @@ function eventsList() {
                     }
                     break;
                 default:
-
                     if(window.gSTB.GetStandByStatus() == false){
                         window.gSTB.StandBy(true);
                     }
                     else{
                         window.gSTB.StandBy(false);
-        
                         navigation.hidePlayback();
                         var tvType = 'Mag';
                         Auth.prototype.clientAuthorization(null, function () {
-                            if (navigation.ifActivationMode()) {
-                                mag.authorization();
-                            } else {
-                                mag.setContentMode();
-                            }
+                            mag.authorization();
                             return tvType;
                         });            
                     }
