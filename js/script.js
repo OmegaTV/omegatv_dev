@@ -6083,6 +6083,7 @@ function eventsList() {
                     }
                     break;
             }
+            break;
 
         case 37: //left-button
             console.log('left');
