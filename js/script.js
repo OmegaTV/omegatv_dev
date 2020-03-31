@@ -6053,33 +6053,37 @@ function eventsList() {
             }
             break;
         case 85:
-            console.log("Stand by mode :");
-            console.log(window.gSTB.GetStandByStatus());
-
-            if(window.gSTB.GetStandByStatus() == false){
-                window.gSTB.StandBy(true);
-                console.log("Power turn off");
-            }
-            else{
-                window.gSTB.StandBy(false);
-
-                navigation.hidePlayback();
-                var tvType = 'Mag';
-                console.log("before auth");
-                Auth.prototype.clientAuthorization(null, function () {
-                    if (navigation.ifActivationMode()) {
-                        console.log("in auth");
-                        mag.authorization();
-                    } else {
-                        mag.setContentMode();
+            switch (mag.currentObj) {
+                case NAV_AUTHORIZATION :    
+                    if(window.gSTB.GetStandByStatus() == false){
+                        window.gSTB.StandBy(true);
                     }
-                    return tvType;
-                });
+                    else{
+                        window.gSTB.StandBy(false);
+                    }
+                    break;
+                default:
 
-                console.log("Power turn on");                
+                    if(window.gSTB.GetStandByStatus() == false){
+                        window.gSTB.StandBy(true);
+                    }
+                    else{
+                        window.gSTB.StandBy(false);
+        
+                        navigation.hidePlayback();
+                        var tvType = 'Mag';
+                        Auth.prototype.clientAuthorization(null, function () {
+                            if (navigation.ifActivationMode()) {
+                                mag.authorization();
+                            } else {
+                                mag.setContentMode();
+                            }
+                            return tvType;
+                        });            
+                    }
+                    break;
             }
 
-            break
         case 37: //left-button
             console.log('left');
             switch (mag.currentObj) {
